@@ -1,4 +1,6 @@
-/* This jquery file is used to send ajax data to profile.jsp on the server*/
+/*
+* Send AJAX request to Java Servlet WebAPI( Reference: https://github.com/xfitu/WebAPI)
+* This jquery file is used to send ajax data to profile.jsp on the server*/
 /* this jquery functions for updating user profile*/
 /*IMPORTANT NOTE: everything must be inside document.ready function */
 $(document).ready(function () {
@@ -20,8 +22,7 @@ $(document).ready(function () {
             dataString = "name=" + name;
             $.ajax({
                 type: "POST",
-                url: "https://192.168.255.11:7443/ActiveDirectoryWebAPI/GetAnUserAttributes",
-				//url: "https://192.168.255.17:6443/WebAPI/GetAnUserAttributes",
+                url: "https://192.168.255.11:7443/WebAPI/GetAnUserAttributes",
                 data: dataString,
                 dataType: "json",
                 success: function (result) {
@@ -324,7 +325,7 @@ $(document).ready(function () {
             dataString = "name=" + name + "&newfname=" + newfname + "&newlname=" + newfname;
             $.ajax({
                 type: "POST",
-                url: "https://192.168.255.11:7443/ActiveDirectoryWebAPI/UpdateName",
+                url: "https://192.168.255.11:7443/WebAPI/UpdateName",
                 data: dataString,
                 dataType: "json",
                 success: function (result) {
@@ -369,7 +370,7 @@ $(document).ready(function () {
             dataString = "name=" + name + "&newusername=" + newusername;
             $.ajax({
                 type: "POST",
-                url: "https://192.168.255.11:7443/ActiveDirectoryWebAPI/UpdateUsername",
+                url: "https://192.168.255.11:7443/WebAPI/UpdateUsername",
                 data: dataString,
                 dataType: "json",
                 success: function (result) {
@@ -414,7 +415,7 @@ $(document).ready(function () {
             dataString = "name=" + name + "&username=" + username + "&password=" + newpassword;
             $.ajax({
                 type: "POST",
-                url: "https://192.168.255.11:7443/ActiveDirectoryWebAPI/UpdatePassword",
+                url: "https://192.168.255.11:7443/WebAPI/UpdatePassword",
                 data: dataString,
                 dataType: "json",
                 success: function (result) {
@@ -458,7 +459,7 @@ $(document).ready(function () {
             dataString = "name=" + name + "&groupname=" + role;
             $.ajax({
                 type: "POST",
-                url: "https://192.168.255.11:7443/ActiveDirectoryWebAPI/AddUserToGroup",
+                url: "https://192.168.255.11:7443/WebAPI/AddUserToGroup",
                 data: dataString,
                 dataType: "json",
                 success: function (result) {
@@ -501,7 +502,7 @@ $(document).ready(function () {
             dataString = "name=" + name + "&groupname=" + role;
             $.ajax({
                 type: "POST",
-                url: "https://192.168.255.11:7443/ActiveDirectoryWebAPI/RemoveUserFromGroup",
+                url: "https://192.168.255.11:7443/WebAPI/RemoveUserFromGroup",
                 data: dataString,
                 dataType: "json",
                 success: function (result) {
@@ -657,7 +658,7 @@ $(document).ready(function () {
             }
             $.ajax({
                 type: "POST",
-                url: "https://192.168.255.11:7443/ActiveDirectoryWebAPI/UpdateAttribute",
+                url: "https://192.168.255.11:7443/WebAPI/UpdateAttribute",
                 data: dataString,
                 dataType: "json",
                 success: function (result) {
@@ -704,7 +705,7 @@ $(document).ready(function () {
 
             $.ajax({
                 type: "POST",
-                url: "https://192.168.255.11:7443/ActiveDirectoryWebAPI/DeleteAttribute",
+                url: "https://192.168.255.11:7443/WebAPI/DeleteAttribute",
                 data: dataString,
                 dataType: "json",
                 success: function (result) {
