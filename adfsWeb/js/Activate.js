@@ -31,7 +31,7 @@ $(document).ready(function() {
       dataString = "fname=" + fname+"&lname="+lname;
             $.ajax({
                 type: "POST",
-                url: "https://192.168.255.11:7443/ActiveDirectoryWebAPI/ActivateAccount",
+                url: "https://192.168.255.11:7443/WebAPI/ActivateAccount",
                 data: dataString,
                 dataType: "json",
                success: function( result) {
