@@ -4,10 +4,10 @@ Claims-aware  ASP.NET web application which uses WS-Federation protocol to commu
 Development Steps:
 ------------------
 1) Creating the web application using Microsoft Visual Studio 2010
-2) Install WIF SDK in visual studio
+2) Install WIF(https://msdn.microsoft.com/en-us/library/hh545401(v=vs.110).aspx) SDK in visual studio
 3) Use the WIF SDK to make the web application as claims-aware web application.a metadata will be created for the web application
 4) Creating Relying Party Trusts for the  web application on ADFS server management console and configure using metadata created in step 3
-
+5) Creating claims rules for sending user's details such as sAMAccount,name,role(use group membership value as role value e.g. doctor and    patient)
 
 USAGE
 -----
